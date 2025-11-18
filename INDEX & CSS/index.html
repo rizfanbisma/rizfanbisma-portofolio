@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rizfan Bisma — Portofolio</title>
+  <meta name="description" content="Portofolio Rizfan Bisma Adi Nugroho | XII DKV 2" />
+
+  <!-- FILE CSS EKSTERNAL -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="floating-shape" aria-hidden="true"></div>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="rizzz.jpg" class="logo-img" alt="Rizfan Bisma">
+        </div>
+
+        <div>
+          <h1>Rizfan Bisma</h1>
+          <div style="font-size:12px;color:var(--muted)">Portofolio — XII DKV 2</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#portfolio">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section id="home" class="hero card">
+        <div class="intro">
+          <div class="chip">Hai, selamat datang 👋</div>
+          <h2>Halo — Saya Rizfan Bisma Adi Nugroho</h2>
+          <p class="small-muted">Siswa kelas XII DKV 2. Saya membuat karya visual kreatif, ilustrasi, dan desain grafis. Berikut contoh portofolio dan karya saya.</p>
+
+          <div class="card-stats">
+            <div class="stat"><strong>30+</strong><span style="font-size:12px;color:var(--muted)">Karya</span></div>
+            <div class="stat"><strong>3</strong><span style="font-size:12px;color:var(--muted)">Kelas</span></div>
+            <div class="stat"><strong>1</strong><span style="font-size:12px;color:var(--muted)">Tujuan</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-art">
+          <div class="avatar-placeholder"><img src="rizzz.jpg" alt="Avatar"></div>
+          <div class="small-muted">Rizfan — XII DKV 2</div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="card about">
+        <div class="text">
+          <h3>Tentang Saya</h3>
+          <p class="small-muted">
+           Saya adalah siswa SMK jurusan desain komunikasi visual yang memiliki minat tinggi dalam bidang seni visual, dokumentasi, dan media kreatif. Tujuan saya adalah mengembangkan karier sebagai fotografer dan vidiografer profesional dengan fokus pada pengambilan foto atau video, pengeditan foto atau video, serta penciptaan konsep visual yang menarik dan komunikatif.</p>
+           
+          <div style="margin-top:20px">
+            <h3>Skill</h3>
+            <ul class="small-muted">
+             <li>Fotografi (Human Interest, Produk, Event)</li>
+              <li>Videografi (Pengambilan Gambar & Sinematografi)</li>
+              <li>Editing Foto (Lightroom, Photoshop)</li>
+              <li>Editing Video (CapCut, Premiere Pro)</li>
+              <li>Desain Grafis (Layout, Komposisi, Tipografi)</li>
+              <li>Pembuatan Konten Kreatif</li>
+              <li>Manajemen Media Sosial</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="card">
+        <h3>Galeri / Portofolio</h3>
+        <p class="small-muted">Berikut adalah contoh galeri portofolio menggunakan gambar placeholder. Kamu dapat mengganti gambar-gambar ini dengan karya asli kapan saja.</p>
+
+        <div class="grid">
+          <div class="tile" style="background-image:url('https://picsum.photos/400?random=2')">
+            <div><h3>Editing Vidio</h3><p>editing media</p></div>
+          </div>
+
+          <div class="tile" style="background-image:url('https://picsum.photos/400?random=3')">
+            <div><h3>Editing Foto</h3><p>Media promosi</p></div>
+          </div>
+
+          <div class="tile" style="background-image:url('https://picsum.photos/400?random=4')">
+            <div><h3>Fotografi</h3><p>Human interest</p></div>
+          </div>
+
+          <div class="tile" style="background-image:url('https://picsum.photos/400?random=5')">
+            <div><h3>Desain Grafis</h3><p>Layout</p></div>
+          </div>
+
+          <div class="tile" style="background-image:url('https://picsum.photos/400?random=6')">
+            <div><h3>vidiografi</h3><p>Editing media</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="card">
+        <h3>Kontak</h3>
+        <p class="small-muted">Isi form di bawah untuk mengirim pesan. Atau hubungi saya melalui kontak langsung di bawah.</p>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Formulir dikirim (simulasi)')">
+          <input type="text" placeholder="Nama" required />
+          <input type="email" placeholder="Email" required />
+          <input type="text" placeholder="Subjek" />
+          <textarea placeholder="Pesan" required></textarea>
+          <div style="grid-column:1/-1;text-align:right"><button class="btn" type="submit">Kirim Pesan</button></div>
+        </form>
+
+         <div class="card" style="text-align:center">
+  <h4 style="margin:6px 0">Ingin Kerja Sama?</h4>
+  <p class="small-muted">
+    Saya terbuka untuk berbagai bentuk kerja sama di bidang fotografi, videografi, desain visual,
+    maupun pembuatan konten kreatif. Jika Anda membutuhkan dukungan untuk proyek personal,
+    bisnis, branding, atau dokumentasi event, saya siap membantu memberikan hasil terbaik.
+  </p>
+
+  <ul class="small-muted" style="text-align:left; margin:12px auto; max-width:260px; line-height:1.55">
+    <li>• Dokumentasi kegiatan & event</li>
+    <li>• Desain grafis & visual branding</li>
+    <li>• Konten kreatif untuk sosial media</li>
+    <li>• Editing foto & video</li>
+    <li>• Talent promosi & media publikasi</li>
+  </ul>
+
+  <p class="small-muted">
+    Klik tombol di bawah untuk langsung terhubung dan mulai berdiskusi!
+  </p>
+
+  <div style="margin-top:14px">
+    <a href="https://wa.me/6285725266813" target="_blank" class="btn">Hubungi Melalui WhatsApp</a>
+  </div>
+</div>
+
+        <div style="margin-top:20px">
+          <h4>Kontak Langsung</h4>
+          <p class="small-muted">Email: <a href="mailto:rizfanbisma@gmail.com" style="color:var(--accent)">rizfanbisma@gmail.com</a></p>
+          <p class="small-muted">WhatsApp: <a href="https://wa.me/6285725266813" style="color:var(--accent)" target="_blank">0857‑2526‑6813</a></p>
+
+          <h4 style="margin-top:16px">Sosial Media</h4>
+          <p class="small-muted">Instagram: <a href="https://www.instagram.com/rzfnnbsy_?igsh=d2lzaTVwdnN0dWZ5" target="_blank" style="color:var(--accent)">@rzfnnbsy_</a></p>
+          <p class="small-muted">TikTok: <a href="https://vm.tiktok.com/ZSHcNwHLbVMH2-OUTKB/" target="_blank" style="color:var(--accent)">TikTok Rizfan</a></p>
+          <p class="small-muted">YouTube: <a href="http://www.youtube.com/@YT_MASRIZZZ" target="_blank" style="color:var(--accent)">@YT_MASRIZZZ</a></p>
+          <p class="small-muted">Behance: <a href="https://www.behance.net/rizfanbisma" target="_blank" style="color:var(--accent)">behance.net/rizfanbisma</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="card" id="copyright">© 2025 Rizfan Bisma • XII DKV 2</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("copyright").innerHTML =
+      "© " + new Date().getFullYear() + " Rizfan Bisma • XII DKV 2";
+  </script>
+
+</body>
+</html>
