@@ -1,0 +1,786 @@
+body {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://picsum.photos/1920/1080?blur=2&random=bg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+:root {
+  --bg:#ffffff;
+  --text:#111111;
+  --card:#f3f3f3;
+  --accent:#2563eb;
+}
+
+body.dark {
+  --bg:#0f0f14;
+  --text:#eaeaea;
+  --card:#1a1a22;
+  --accent:#38bdf8;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s ease;
+}
+
+.header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 40px;
+  background:var(--bg);
+}
+
+.logo {
+  color:var(--accent);
+}
+
+.nav a {
+  margin:0 12px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+
+.nav a:hover {
+  color:var(--accent);
+}
+
+.theme-toggle {
+  font-size:20px;
+  background:var(--card);
+  color:var(--text);
+  border-radius:50%;
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  transition:.3s;
+}
+
+.theme-toggle:hover {
+  transform:rotate(15deg) scale(1.1);
+}
+
+.hero {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.profile {
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--accent);
+  margin-bottom:20px;
+}
+
+.hero h2 {
+  font-size:3rem;
+}
+
+.hero p {
+  opacity:.8;
+  margin-top:10px;
+}
+
+section {
+  padding:90px 40px;
+}
+
+.about,
+.contact,
+.skills {
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.skill-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.skill-card {
+  background:var(--card);
+  padding:22px;
+  border-radius:16px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.skill-card:hover {
+  background:var(--accent);
+  color:#fff;
+  transform:translateY(-6px);
+}
+
+.portfolio h2 {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.grid img {
+  width:100%;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.grid img:hover {
+  transform:scale(1.05);
+}
+
+footer {
+  text-align:center;
+  padding:30px;
+  opacity:.6;
+}
+
+.contact {
+  max-width:700px;
+  margin:auto;
+}
+
+.contact-info {
+  margin-top:40px;
+  text-align:center;
+}
+
+.contact-list {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:20px;
+}
+
+.contact-item {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+
+.icon {
+  width:22px;
+  height:22px;
+  filter:invert(0);
+  transition:.3s;
+}
+
+body.dark .icon {
+  filter:invert(1);
+}
+
+.contact-item:hover {
+  color:var(--accent);
+}
+
+.contact-item:hover .icon {
+  transform:scale(1.1);
+}
+
+.contact-list a:hover {
+  color:var(--accent);
+}
+
+.cta {
+  margin-top:40px;
+  padding:30px;
+  background:var(--card);
+  border-radius:20px;
+}
+
+.cta h3 {
+  margin-bottom:10px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:16px;
+  padding:12px 22px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.wa-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Icon WhatsApp */
+.wa-icon {
+  width:20px;
+  height:20px;
+  filter:invert(1); /* biar putih */
+}
+
+/* Saat dark mode tetap kontras */
+body.dark .wa-icon {
+  filter:invert(1);
+}
+
+.btn:hover {
+  opacity:.9;
+}
+
+@media(max-width:768px) {
+  .nav {
+    display:none;
+  }
+  .hero h2 {
+    font-size:2.2rem;
+  }
+}
+
+/* CONTACT INFO CENTER */
+.contact-info {
+  max-width:420px; /* BIKIN TIDAK KE PINGGIR */
+  margin:0 auto; /* CENTER */
+  text-align:center;
+}
+
+/* LIST KONTAK */
+.contact-list {
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:24px;
+}
+
+/* ITEM KONTAK */
+.contact-item {
+  display:flex;
+  align-items:center;
+  justify-content:center; /* ICON + TEXT KE TENGAH */
+  gap:12px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+  padding:12px 16px;
+  background:var(--card);
+  border-radius:14px;
+  transition:.3s;
+}
+
+.contact-item:hover {
+  background:var(--accent);
+  color:#fff;
+  transform:translateY(-3px);
+}
+
+/* ICON */
+.icon {
+  width:20px;
+  height:20px;
+  transition:.3s;
+  filter:invert(0);
+}
+
+body.dark .icon {
+  filter:invert(1);
+}
+
+/* BIODATA */
+.biodata {
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+}
+
+.biodata-card {
+  margin-top:30px;
+  background:var(--card);
+  padding:30px;
+  border-radius:20px;
+}
+
+.bio-item {
+  display:flex;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+body.dark .bio-item {
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.bio-item span {
+  font-weight:600;
+  opacity:.8;
+}
+
+.bio-item p {
+  margin:0;
+}
+
+/* PENDIDIKAN */
+.education {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+  border-radius: 28px;
+  margin: 50px auto;
+  padding: 50px 30px;
+  max-width: 900px;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+}
+
+.edu-list {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.edu-card {
+  margin-top: 20px;
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.edu-card h3 {
+  margin-bottom:6px;
+}
+
+.edu-card span {
+  font-size:.9rem;
+  opacity:.7;
+}
+
+.edu-card:hover {
+  transform:translateY(-6px);
+  background:var(--accent);
+  color:#fff;
+}
+
+/* FOTO SEKOLAH - RIWAYAT PENDIDIKAN */
+.edu-img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:14px;
+}
+
+/* CARD PENDIDIKAN */
+.edu-card {
+  background:var(--card);
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+  transition:.3s;
+}
+
+.edu-card:hover {
+  transform:translateY(-6px);
+  background:var(--accent);
+  color:#fff;
+}
+
+.edu-card:hover .edu-img {
+  filter:brightness(.9);
+}
+
+/* SKILLS DENGAN FOTO */
+.skill-card {
+  background:var(--card);
+  border-radius:20px;
+  overflow:hidden;
+  text-align:center;
+  transition:.3s;
+}
+
+.skill-card img {
+  width:100%;
+  height:140px;
+  object-fit:cover;
+}
+
+.skill-card span {
+  display:block;
+  padding:16px;
+  font-weight:600;
+}
+
+.skill-card:hover {
+  transform:translateY(-6px);
+  background:var(--accent);
+  color:#fff;
+}
+
+.skill-card:hover img {
+  filter:brightness(.85);
+}
+
+/* PRESTASI */
+.achievements {
+  max-width: 1000px;
+  margin: 60px auto; /* beri jarak vertikal dari section lain */
+  text-align: center;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px; /* jarak antar card prestasi */
+  margin-top: 30px;
+}
+
+.achievement-card {
+  background:var(--card);
+  border-radius:22px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.achievement-card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.achievement-card h3 {
+  margin:16px 0 6px;
+}
+
+.achievement-card span {
+  font-size:.9rem;
+  opacity:.7;
+}
+
+.achievement-card p {
+  margin:8px 0 18px;
+  padding:0 14px;
+}
+
+.achievement-card:hover {
+  transform:translateY(-8px);
+  background:var(--accent);
+  color:#fff;
+}
+
+.achievement-card:hover img {
+  filter:brightness(.85);
+}
+
+.skills {
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
+
+/* GRID SKILLS KE SAMPING */
+.skill-grid {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap; /* biar turun rapi di HP */
+  margin-top:30px;
+}
+
+@media(max-width:768px) {
+  .header-cta {
+    margin-top:10px;
+  }
+}
+
+/* Light mode dengan foto + overlay halus */
+body {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+    url('image/bg\ 1.png') no-repeat center center fixed; /* ganti dengan foto sendiri */
+  background-size: cover;
+  backdrop-filter: blur(2px); /* opsional, bikin blur halus */
+  color: var(--text);
+  font-weight: 600; /* semua teks bold */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode dengan foto + overlay halus */
+body.dark {
+  background: 
+    linear-gradient(rgba(15, 15, 20, 0.25), rgba(15, 15, 20, 0.25)),
+    url('image/bg\ 1.png') no-repeat center center fixed; /* ganti dengan foto sendiri */
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  color: #f0f0f0;
+  font-weight: 600; /* semua teks bold */
+}
+
+
+
+
+/* Section khusus, misal About, Contact, Skills */
+section {
+  color: var(--text);
+  font-weight: 600; /* teks section juga bold */
+}
+
+/* Judul dan paragraf agar jelas */
+section h2,
+section p,
+section span {
+  font-weight: 600;
+}
+
+body {
+  color: var(--text); /* default untuk light mode */
+}
+
+/* Dark mode */
+body.dark {
+  color: #f0f0f0; /* teks terang supaya terlihat di background gelap */
+}
+
+/* Section khusus, misal About, Contact, Skills */
+section {
+  color: var(--text);
+}
+
+section {
+  position: relative;
+  background: rgba(0,0,0,0.6); /* overlay gelap transparan */
+  backdrop-filter: blur(2px);
+  border-radius: 28px; /* border rapi */
+  margin: 40px auto 60px auto; /* jarak bawah lebih agar border tidak menempel section berikut */
+  padding: 70px 30px;
+  max-width: 1100px;
+  overflow: hidden; /* pastikan border-radius tidak terganggu isi section */
+}
+
+/* Section CTA tanpa border/background */
+.cta-section {
+  position: relative;
+  margin: 50px auto; /* tetap beri jarak antar section */
+  padding: 50px 30px;
+  max-width: 1100px;
+  /* background, border-radius, dan blur dihapus */
+}
+
+/* CTA Card */
+.cta {
+  text-align: center;
+}
+
+.cta h3,
+.cta p {
+  font-weight: bold; /* teks tebal supaya jelas */
+  color: var(--text); /* mengikuti mode light/dark */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wa-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+body.dark .wa-icon {
+  filter: invert(1);
+}
+
+#about {
+  position: relative;
+  background: rgba(0,0,0,0.6); /* overlay transparan */
+  backdrop-filter: blur(2px);
+  border-radius: 28px;
+  margin: 50px auto;
+  padding: 70px 30px;
+  max-width: 1100px;
+  overflow: hidden;
+  font-weight: bold; /* teks tebal supaya jelas */
+}
+
+.biodata {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+  border-radius: 28px;
+  margin: 50px auto;
+  padding: 50px 30px;
+  max-width: 900px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* Semua section default */
+section {
+  position: relative;
+  border-radius: 28px;
+  margin: 50px auto;
+  padding: 70px 30px;
+  max-width: 1100px;
+  overflow: hidden;
+  font-weight: bold;
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Overlay tiap section */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-light); /* transparan untuk light mode */
+  backdrop-filter: blur(6px); /* blur untuk membuat teks lebih jelas */
+  border-radius: 28px;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+/* Dark mode overlay */
+body.dark section::before {
+  background: var(--overlay-dark); /* transparan gelap untuk dark mode */
+}
+
+/* Konten di depan overlay */
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light mode backgrounds */
+:root {
+  --bg-home: url('image/b5.jpg');
+  --bg-about: url('image/b4.jpg');
+  --bg-biodata: url('image/b6.jpg');
+  --bg-education: url('image/bg pendidikan 2.jpeg');
+  --bg-skills: url('image/bg skill terang.png');
+  --bg-portfolio: url('image/b5.jpg');
+  --bg-achievements: url('image/bg prestasi terang.jpeg');
+  --bg-cta: url('image/b4.jpg');
+  --bg-contact: url('image/bg medsos terang.jpeg');
+}
+
+/* Dark mode backgrounds */
+body.dark {
+  --bg-home: url('image/b 1.jpg');
+  --bg-about: url('image/b2.jpg');
+  --bg-biodata: url('image/bg.jpg');
+  --bg-education: url('image/bg pendidikan.png');
+  --bg-skills: url('image/bg\ skill\ gelap.jpeg');
+  --bg-portfolio: url('image/bg.jpg');
+  --bg-achievements: url('image/bg presatasi gelap.jpeg');
+  --bg-cta: url('image/b2.jpg');
+  --bg-contact: url('image/bg medsos gelap.jpeg');
+}
+
+/* Terapkan background tiap section */
+#home {
+  background: var(--bg-home) center/cover no-repeat;
+}
+#about {
+  background: var(--bg-about) center/cover no-repeat;
+}
+#biodata {
+  background: var(--bg-biodata) center/cover no-repeat;
+}
+#education {
+  background: var(--bg-education) center/cover no-repeat;
+}
+#skills {
+  background: var(--bg-skills) center/cover no-repeat;
+}
+#portfolio {
+  background: var(--bg-portfolio) center/cover no-repeat;
+}
+#achievements {
+  background: var(--bg-achievements) center/cover no-repeat;
+}
+#cta {
+  background: var(--bg-cta) center/cover no-repeat;
+}
+#contact {
+  background: var(--bg-contact) center/cover no-repeat;
+}
+
+.about p {
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+/* Wrapper About Me */
+.about-text {
+  border: 2px solid var(--border-light); /* default light mode */
+  padding: 20px 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+.about-text {
+  margin-top:40px;
+  padding:30px;
+  background:var(--card);
+  border-radius:20px;
+}
+
+.about-text h3 {
+  margin-bottom:10px;
+}
+
+/* Dark mode border */
+body.dark .about-text {
+  border: 2px solid var(--border-dark);
+}
