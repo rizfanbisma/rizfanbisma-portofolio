@@ -17,11 +17,11 @@ Melalui setiap pengalaman yang saya jalani, saya selalu berusaha meningkatkan ke
 
 BIODATA
 
-- Nama: Rizfan Bisma Adi Nugroho
-- Tempat, Tanggal Lahir: Sleman, 9 Februari 2008
-- Status: Pelajar / Creative Student
-- Bidang Minat: Fotografi, Videografi, Editing Foto & Video, Desain Grafis
-- Email: rizfanbisma@gmail.com
+- Nama : Rizfan Bisma Adi Nugroho
+- Tempat, Tanggal Lahir : Sleman, 9 Februari 2008
+- Status : Pelajar / Creative Student
+- Bidang Minat : Fotografi, Videografi, Editing Foto & Video, Desain Grafis
+- Email : rizfanbisma@gmail.com
 
 
 RIWAYAT PENDIDIKAN
